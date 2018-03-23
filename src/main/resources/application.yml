@@ -1,0 +1,31 @@
+DbProperties:
+  ip: localhost
+  port: 45145
+  dbName: DBMDB
+  userName: loguser
+  passwd: Cmb@2015
+
+ZkProperties:
+  ipAndPort: localhost:2181
+  timeout: 4000
+  retry: 3
+  retryTime: 2000
+MonitorProperties:
+  expireTime: 1000
+  name: kira
+  heartbeatPath: /dbCuid/heartbeat/
+  addJob: addJob
+  removeJob: removeJob
+  dbCuidPrefix: dbCuid
+  distribute: distribute
+  refreshCacheInterval: 100
+  scanLastAgentInterval: 10
+
+spring:
+  application:
+    name: data-multidatasource
+    datasource:
+        type: com.ibm.db2.jcc.DB2Driver
+        url: jdbc:db2://localhost:45145/DBMDB
+        username: loguser
+        password: Cmb@2015
